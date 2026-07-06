@@ -69,19 +69,7 @@ function fecha() {
     document.querySelector('.carrosfundo').style.display = 'none'
 }
 
-gsap.registerPlugin(ScrollTrigger)
 
-let latinhas = document.querySelectorAll('.Produto')
-
-gsap.to(latinhas, {
-    opacity: 1,
-    scrollTrigger: {
-        start: '65% 60%',
-        end: '90% 60%',
-        scrub: true,
-        //markers: true,
-    }
-})
 
 function comprar1() {
     document.querySelector('.produtoss.um').style.display = 'block'
@@ -120,3 +108,78 @@ function comprar6() {
 function lixo6() {
     document.querySelector('.produtoss.seis').style.display = 'none'
 }
+
+
+gsap.registerPlugin(ScrollTrigger)
+
+let latinhas = document.querySelectorAll('.Produto')
+
+gsap.to(latinhas, {
+    opacity: 1,
+    scrollTrigger: {
+        start: '65% 60%',
+        end: '90% 60%',
+        scrub: true,
+        //markers: true,
+    }
+})
+let faixa = document.querySelector('.fundo')
+/** */
+gsap.to(faixa, {
+    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+    scrollTrigger: {
+        scrub: 10,
+        start: '38% 28%',
+        end: '73% 68%',
+       // markers: true
+    }
+})
+let fundoPruduto = document.querySelector('.section3')
+let fundoTitulo = document.querySelector('.titulo')
+gsap.to(fundoTitulo, {
+    backgroundColor: '#f5f5f5',
+    scrollTrigger: {
+        scrub: true,
+      //  markers: true,
+        end: '65% 80%',
+        start: '73% 78%',
+    }
+})
+
+let lata1 = document.getElementById('latinha1')
+let lata2 = document.getElementById('latinha2')
+let lata3 = document.getElementById('latinha3')
+
+gsap.to(lata1, {
+    rotation: 10,
+    duration: 1,
+
+scrollTrigger:{
+    scrub: true,
+  //  markers: true,
+    start: '45% 50%',
+    end: '50% 50%',
+}
+})
+gsap.to(lata2, {
+    rotation: '-10',
+    duration: 1,
+
+scrollTrigger:{
+    scrub: true,
+   // markers: true,
+    start: '50% 50%',
+    end: '55% 50%',
+}
+})
+gsap.to(lata3, {
+    rotation: 10,
+    duration: 1,
+
+scrollTrigger:{
+    scrub: true,
+  //  markers: true,
+    start: '55% 50%',
+    end: '60% 50%',
+}
+})
